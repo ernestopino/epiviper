@@ -10,4 +10,4 @@ license: "MIT"
 code_files:
 
 # View
-- {name: View/{{ prefix }}{{ module_info.name }}ViewController.swift, path: Code/View/ModuleViewController.swift.liquid}
+- {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
