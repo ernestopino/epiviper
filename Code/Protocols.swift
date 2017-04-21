@@ -1,0 +1,67 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+protocol {{ prefix }}{{ module_info.name }}ViewProtocol: class {
+    var eventHandler: {{ prefix }}{{ module_info.name }}PresenterProtocol? {get set}
+    /**
+     * Add here your methods for communication Presenter -> View
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}RouterProtocol: class {
+    func presentModule(fromViewController viewController: UIViewController)
+    /**
+     * Add here your methods for communication Presenter -> Router
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}PresenterProtocol: class {
+    var view: {{ prefix }}{{ module_info.name }}ViewProtocol? {get set}
+    var interactor: {{ prefix }}{{ module_info.name }}InteractorInputProtocol? {get set}
+    var router: {{ prefix }}{{ module_info.name }}RouterProtocol? {get set}
+    /**
+     * Add here your methods for communication View -> Presenter
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}InteractorInputProtocol: class {
+    var presenter: {{ prefix }}{{ module_info.name }}InteractorOutputProtocol? {get set}
+    var dataManager: {{ prefix }}{{ module_info.name }}DataManagerProtocol? {get}
+    /**
+     * Add here your methods for communication Presenter -> Interactor
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}InteractorOutputProtocol: class {
+    /**
+     * Add here your methods for communication Interactor -> Presenter
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}DataManagerProtocol: class {
+    var localDataManager: {{ prefix }}{{ module_info.name }}LocalDataManager? {get set}
+    var serverDataManager: {{ prefix }}{{ module_info.name }}ServerDataManager? {get set}
+    /**
+     * Add here your methods for communication Interactor -> DataManager
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}LocalDataManager: class {
+    /**
+     * Add here your methods for communication DataManager -> LocalDataManager
+     */
+}
+
+protocol {{ prefix }}{{ module_info.name }}ServerDataManager: class {
+    /**
+     * Add here your methods for communication DataManager -> ServerDataManager
+     */
+}
