@@ -1,0 +1,13 @@
+# Template information section
+name: "epiviper"
+summary: "EPIViper... Generamba template with Swift VIPER Architecture at EPINOM's style ;)"
+author: "Ernesto Pino"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# View
+- {name: View/{{ prefix }}{{ module_info.name }}ViewController.swift, path: Code/View/ModuleViewController.swift.liquid}
