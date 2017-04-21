@@ -10,7 +10,7 @@ license: "MIT"
 code_files:
 
 # Protocols
-- {name: Protocols.swift, path: Code/Protocols.swift.liquid}
+- {name: ./Protocols.swift, path: Code/Protocols.swift.liquid}
 
 # View
 - {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
