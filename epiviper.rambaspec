@@ -23,8 +23,8 @@ code_files:
 
 # Entity
 - {name: Entity/DataManager.swift, path: Code/Entity/DataManager.swift.liquid}
+- {name: Entity/Local}
+- {name: Entity/Server}
 
 # Router
 - {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
-- {name: /Local}
-- {name: /Server}
