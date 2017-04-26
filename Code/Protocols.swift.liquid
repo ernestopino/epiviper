@@ -47,20 +47,20 @@ protocol {{ prefix }}{{ module_info.name }}InteractorOutputProtocol: class {
 }
 
 protocol {{ prefix }}{{ module_info.name }}DataManagerProtocol: class {
-    var localDataManager: {{ prefix }}{{ module_info.name }}LocalDataManager? {get set}
-    var serverDataManager: {{ prefix }}{{ module_info.name }}ServerDataManager? {get set}
+    var localDataManager: {{ prefix }}{{ module_info.name }}LocalDataManagerProtocol? {get set}
+    var serverDataManager: {{ prefix }}{{ module_info.name }}ServerDataManagerProtocol? {get set}
     /**
      * Add here your methods for communication Interactor -> DataManager
      */
 }
 
-protocol {{ prefix }}{{ module_info.name }}LocalDataManager: class {
+protocol {{ prefix }}{{ module_info.name }}LocalDataManagerProtocol: class {
     /**
      * Add here your methods for communication DataManager -> LocalDataManager
      */
 }
 
-protocol {{ prefix }}{{ module_info.name }}ServerDataManager: class {
+protocol {{ prefix }}{{ module_info.name }}ServerDataManagerProtocol: class {
     /**
      * Add here your methods for communication DataManager -> ServerDataManager
      */
